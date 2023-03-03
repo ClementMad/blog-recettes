@@ -1,16 +1,87 @@
+<style>
+
+  footer{
+    background: #FAE5C1;
+  } 
+  footer h5,
+  footer p {
+    color: ##482815;
+  }
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#FAE5C1;">
+  <a class="navbar-brand" href="#" style="color:#482815;">Japoroco</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color:#482815;">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#482815;">Créer un article</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Recipes</h1>
-
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="position-relative">
+        <img src="https://cdn.discordapp.com/attachments/1033037567156830259/1081136386683441192/Souphano_logo_dune_marque_qui_mix_la_culture_arabe_et_japonaise_912e7c8e-ebe9-4ffe-94d5-f62fb53834eb.png" class="img-fluid" style="width: 1320px; height: 517px; object-fit: cover; border-radius: 40px;" alt="Image">
+        <div class="position-absolute" style="bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 20px;">
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= link_to "New recipe", new_recipe_path %>
+<h1>Les recettes</h1>
+
+<div class="row">
+  <% @recipes.each do |recipe| %> 
+    <div class="col-3">
+    <div class="card" style="width: 18rem; background-color: #FAE5C1;">
+      <%= image_tag recipe.image %>
+      <div class="card-body">
+        <h5 class="card-title"><%= recipe.title %></h5>
+        <a href="#" class="btn btn-primary"><%= link_to "Show this recipe", recipe %></a>
+      </div>
+    </div>
+    </div>
+
+  <% end %>
+ <button type="button" class="btn btn-outline-dark rounded-pill"><%= link_to "New recipe", new_recipe_path %></button>
+    </button>
+
+    <footer class="bg-light" color: ##FAE5C1>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <h5>A propos</h5>
+        <img src="votre-image.jpg" alt="Description de l'image">
+        <p>Description de l'image</p>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <h5>Contact</h5>
+        <p>06 66 00 99 90</p>
+        <p>12 rue Japoroco</p>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <h5>Mentions légales</h5>
+        <p>Conditions d'utilisation</p>
+        <p>Adresse</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
