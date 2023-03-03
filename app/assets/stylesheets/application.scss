@@ -1,5 +1,9 @@
 @import "bootstrap";
 
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+body{  font-family: 'Arapey', serif;
+}
+
 .image-recipe {
     object-fit: cover;
     object-position: 50% 0;
@@ -9,5 +13,13 @@
 
 footer {
     background-color: #FAE5C1 !important;
+    color: #482815;
   }
-  
+
+  .navbar-brand{
+    font-size: 30px;
+  }
+
+.footerjapo{
+    font-size: 30px;
+}
