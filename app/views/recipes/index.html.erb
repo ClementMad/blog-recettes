@@ -2,14 +2,14 @@
   <img src="https://cdn.discordapp.com/attachments/1033037567156830259/1081243829006512148/Souphano_logo_dune2_marque_qui_mix_la_culture_arabe_et_japonaise_912e7c8e-ebe9-4ffe-94d5-f62fb53834eb.png" class="img-fluid" style="width: 1320px; height: 517px; object-fit: cover; border-radius: 40px;" alt="Image">
 </div>
 <h1 class="my-5">Les recettes</h1>
-<div class="row">
+<div class="row container d-flex flex-wrap p-0 justify-content-evenly">
   <% @recipes.each do |recipe| %> 
     <div class="col-lg-3">
       <div class="card mb-5" style="background-color: #FAE5C1;">
         <%= image_tag recipe.image, class: 'card-img-top' %>
         <div class="card-body">
           <h5 class="card-title"><%= recipe.title %></h5>
-          <%= link_to "Voir la recette", recipe, class: 'btn btn-outline-dark stretched-link rounded-pill text-left' %>
+          <%= link_to "Voir la recette", recipe, class: 'btn btn-outline-dark stretched-link rounded-pill ' %>
         </div>
       </div>
     </div>
