@@ -22,8 +22,9 @@
 
 
 
-<div class="class="col-4">
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) , class: 'btn btn-warning rounded-pill '%> |
-  <%= link_to "Back to recipes", recipes_path , class: 'btn btn-primary rounded-pill ' %>
-  <%= button_to "Destroy this recipe", @recipe, method: :delete , class: 'btn btn-danger rounded-pill ' %>
+<div class="col-4">
+  <%= link_to "Modifier la recette", edit_recipe_path(@recipe) , class: 'btn btn-warning rounded-pill btn-block my-2'%>
+  <%= link_to "Retourner à l'accueil", recipes_path , class: 'btn btn-primary rounded-pill btn-block my-2' %>
+  <%= button_to "Retirer la recette", @recipe, method: :delete , class: 'btn btn-danger rounded-pill btn-block my-2' %>
 </div>
+
